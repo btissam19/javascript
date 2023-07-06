@@ -37,3 +37,26 @@ console.log(Math.trunc(dd));
 // Use Variables b + d To Get This Valus
 console.log((parseInt(b)/Math.ceil(dd)).toFixed(2)); // 66.67 => String
 console.log(Math.round(parseInt(b)/Math.ceil(dd))); // 67 => Number
+
+
+//string challenge
+
+console.log("%cstring challenge","color:red");
+
+let aa = "Elzero Web School";
+
+// Include This Method In Your Solution [slice, charAt]
+console.log(aa.charAt(2).toUpperCase()+aa.slice(3,6)); // Zero
+
+// 8 H
+console.log(aa.indexOf("h")); // HHHHHHHH
+console.log(aa.charAt(13).toUpperCase().repeat(8));
+// Return Array
+console.log(aa.split(" ",1)); // ["Elzero"]
+
+// Use Only "substr" Method + Template Literals In Your Solution
+console.log(aa.substr(0,6)+ " " +aa.substr(aa.indexOf("S"))); // Elzero School
+console.log(`${aa.substr(0,6)} ${aa.substr(aa.indexOf("S"))}`);
+// Solution Must Be Dynamic Because String May Changes
+console.log(`${aa.charAt(0).toLowerCase()}${aa.slice(1).toUpperCase()}`); // eLZERO WEB SCHOOl
+

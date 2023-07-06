@@ -144,3 +144,25 @@ console.log(parseInt(flt));
 console.log(parseFloat(flt.toFixed(0))); 
 
 console.log(Math.floor(Math.random() *5)); 
+
+
+//assiegment for string 
+console.log("%cchallenge 3","color:red")
+let userName = "Elzero";
+console.log(userName.charAt(0).toLowerCase()); // e
+console.log(userName.slice(0,1).toLowerCase()); // e
+console.log(userName.slice(-6,-5).toLowerCase()); // e
+console.log(userName.substring(0,1).toLowerCase()); // e
+console.log(userName.substr(0,1).toLowerCase()); // e
+console.log(userName.substring(userName.length-6,userName.length-5).toLowerCase().repeat(3)); // eee
+
+
+
+let word = "Elzero";
+let letterZ = "z";
+let letterE = "e";
+let letterO = "O";
+
+console.log(word.includes(letterZ)); // True
+console.log(word.startsWith(letterE.toLocaleUpperCase())); // True
+console.log(word.endsWith(letterO.toLowerCase())); // True
