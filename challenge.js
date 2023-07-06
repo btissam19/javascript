@@ -10,39 +10,30 @@ let content=`
 let contentRepeatet= content.repeat(4);
 document.write(contentRepeatet);
 //challenge 2
-
-/*
-  Challenge 1
-*/
-
-let a = 10;
-let b = "20";
-let c = 80;
-
-console.log(++a + +b++ + +c++ - +a++);//11 + 20 +80 -12 =99
-console.log(++a + -b + +c++ - -a++ + +a);// 13 -20 +81 - -13 -14 =73
-console.log(--c + +b + --a * +b++ - +b * a + --a - +true);
-
-/*
-  [++a] []
-  [++a]
-  - Value:11
-  - Explain:
-  [+]
-  - Explain:
-*/
-
-/*
-  Challenge 2
-*/
-
 let d = "-100";
 let e = "20";
 let f = 30;
 let g = true;
+console.log(-d*(+e)); 
+console.log(-d + +e +f + 23*g);
+//challenge 3
+let a = 100;
+let b = 2_00.5;
+let c = 1e2;
+let dd = 2.4;
+console.log(b)
+// Find Smallest Number In All Variables And Return Integer
+console.log(Math.min(a,b,c,dd));
 
-// Only Use Variables Value
-// Do Not Use Variable Twice
+// Use Variables a + d One Time To Get The Needed Output
+console.log(Math.pow(a,parseInt(dd))); // 10000
 
-console.log(-d*(+e)); // 2000
-console.log(-d + +e +f + 23*g); // 173
+// Get Integer "2" From d Variable With 4 Methods
+console.log(parseInt(dd));
+console.log(Math.floor(dd));
+console.log(Math.round(dd));
+console.log(Math.trunc(dd));
+
+// Use Variables b + d To Get This Valus
+console.log((parseInt(b)/Math.ceil(dd)).toFixed(2)); // 66.67 => String
+console.log(Math.round(parseInt(b)/Math.ceil(dd))); // 67 => Number
