@@ -247,3 +247,59 @@ switch(day){
   default :
   console.log("an knowns day")
 }
+
+
+// arrays assiegment
+
+console.log("%carray","color:red")
+let myFriends = ["Ahmed", "Elham", "Osama", "Gamal"];
+let numm = 3;
+
+// Method 1
+console.log(myFriends.slice(undefined,numm)) // ["Ahmed", "Elham", "Osama"];
+
+// Method 2
+console.log(myFriends.splice(undefined,myFriends.length -1,undefined)); // ["Ahmed", "Elham", "Osama"];
+
+let friends = ["Ahmed", "Eman", "Osama", "Gamal"];
+
+friends=friends.splice(friends.indexOf("Ahmed"),friends.length-1,undefined)
+friends=friends.splice(friends.indexOf("Eman"),friends.indexOf("Osama"),undefined)
+
+
+console.log(friends); // ["Eman", "Osama"]
+
+
+let arrOne = ["C", "D", "X"];
+let arrTwo = ["A", "B", "Z"];
+let finalArr = [];
+
+finalArr=(arrTwo.slice(arrTwo.indexOf("Z"))).concat(arrOne.reverse(),(arrTwo.slice(undefined,arrTwo.indexOf("Z")).reverse()));
+console.log(finalArr); // ["Z", "X", "D", "C", "B", "A"]
+
+let website = "Go";
+let words = [`${website}ogle`, "Facebook", ["Elzero", "Web", "School"]];
+
+console.log(((words.splice(words.length-1)[0][0]).substring(2)).toUpperCase()); // ZERO
+
+let needle = "JS";
+let haystack = ["PHP", "JS", "Python"];
+if (haystack.includes(needle )){
+    console.log("found");
+}
+if(haystack.indexOf(needle)){
+    console.log("found");
+}
+if(haystack.join("").includes(needle)){
+    console.log("found");
+}
+
+let arr1 = ["A", "C", "X"];
+let arr2 = ["D", "E", "F", "Y"];
+let allArrs = [];
+
+allArrs=(arr2.slice(arr2.indexOf("F"),arr2.length-1)).concat(arr1.slice(arr1.indexOf("X")),arr2.slice(arr2.indexOf("Y")));
+allArrs=(allArrs.join("")).toLowerCase()
+
+
+console.log(allArrs); // fxy
