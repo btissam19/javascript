@@ -166,3 +166,84 @@ let letterO = "O";
 console.log(word.includes(letterZ)); // True
 console.log(word.startsWith(letterE.toLocaleUpperCase())); // True
 console.log(word.endsWith(letterO.toLowerCase())); // True
+
+
+
+// if else assiegment
+let num3 = 110; // "110"
+
+if(num3<10){
+    console.log(`00${num3}`);
+}
+else if(num3>10 && num3<100){
+    console.log(`0${num3}`);
+}
+else {
+    console.log(num3);
+}
+
+let num4 = 9;
+let str = "9";
+let str2 = "20";
+ if(num4==str){
+    console.log(`${num4} Is The Same Value As ${str}`)
+}
+if ( num4=str && typeof num4!=typeof str){
+    console.log(`${num4} Is The Same Value As ${str} But Not The Same Type`)
+}
+ if(num4!==str2){
+    console.log(`${num4} Is Not The Same Value Or The Same Type As ${str2}`)
+}
+if(str!=str2 && typeof str == typeof str2){
+    console.log(`${str} Is The Same Type As ${str2} But Not The Same Value`)
+}
+
+
+//switch assiegment
+
+// let day = "   friday  ";
+// // You Need To Remove Spaces And Make First Letter Capital => Friday
+
+// let da = "Friday";
+// let days = "Saturday";
+// let day = "Sunday";
+// // Output => "No Appointments Available"
+
+// let day = "Monday";
+// let day = "Thursday";
+// // Output => "From 10:00 AM To 5:00 PM"
+
+// let day = "Tuesday";
+// // Output => "From 10:00 AM To 6:00 PM"
+
+// let day = "Wednesday";
+// // Output => "From 10:00 AM To 7:00 PM"
+
+// let day = "World";
+// Output => "Its Not A Valid Day"
+console.log("switch assiegment")
+let day = "   friday  ";
+day = day.trim().charAt(0).toUpperCase()+day.trim().substring(1);
+console.log(day)
+switch(day){
+  case "Friday":
+  case "Saturday":
+  case "Sunday":
+    console.log("No Appointments Available")
+  break
+  case "Monday":
+  case "Thursday":
+  console.log("From 10:00 AM To 5:00 PM")
+  break
+  case "Tuesday":
+  console.log( "From 10:00 AM To 6:00 PM")
+  break
+  case "Wednesday":
+  console.log("From 10:00 AM To 7:00 PM")
+  break
+  case "World":
+  console.log("Its Not A Valid Day")
+  break
+  default :
+  console.log("an knowns day")
+}
