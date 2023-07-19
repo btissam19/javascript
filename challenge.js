@@ -194,3 +194,68 @@ if (holidays===0) {
         money = 0;
         console.log(`My Money is ${money}`);
     }
+
+    //arrays challenge
+ console.log("%c array challenge","color:red;font-size:bold");
+
+let zero = 0;
+
+let counter = 3;
+
+let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+console.log((my.slice(zero,my.indexOf("Gamal"))).reverse()); // ["Osama", "Elham", "Mazero", "Ahmed"];
+myy=(my.slice(zero,my.indexOf("Gamal"))).reverse();
+console.log((myy.slice(1,3))); // ["Elham", "Mazero"]
+myy=((myy.slice(1,3)).slice(1)).join()
+myy=myy.substring(2)
+
+console.log(myy); // "Elzero Mazero"
+
+// console.log(); // "rO"
+
+console.log("%c functions challenge","color:red;font-size:bold");
+
+function checkStatus(a, b, c) {
+  let type=[a,b,c];
+  let str,nmb,bool;
+  let i;
+  for(i=0;i<type.length;i++){
+    if(typeof type[i]==='string'){
+      str=type[i]
+    }
+    else if(typeof type[i]==='number'){
+      nbm=type[i]
+    }
+    else if(typeof type[i]=='boolean'){
+      bool=type[i]
+    }
+    else{
+      console.error('invalid data')
+    }
+  }
+    if (bool === true){
+      console.log(`Hello ${str} , your age is ${nbm}, your are availabel for hire`)
+    }
+    else{
+      console.log(`Hello ${str} , your age is ${nbm}, your are not availabel for hire`)
+  }}
+
+
+// function checkStatus(a, b, c) {
+//   if (typeof a === 'string' && typeof b === 'number' && typeof c === 'boolean') {
+//     if (c === true) {
+//       console.log(`Hello ${a}, your age is ${b}, you are available for hire.`);
+//     } else {
+//       console.log(`Hello ${a}, your age is ${b}, you are not available for hire.`);
+//     }
+//   } else {
+//     console.log('Invalid input types. Please provide a string, a number, and a boolean value.');
+//   }
+// }
+
+
+// Needed Output
+checkStatus("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+checkStatus(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+checkStatus(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+checkStatus(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
