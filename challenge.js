@@ -239,23 +239,81 @@ function checkStatus(a, b, c) {
     else{
       console.log(`Hello ${str} , your age is ${nbm}, your are not availabel for hire`)
   }}
-
-
-// function checkStatus(a, b, c) {
-//   if (typeof a === 'string' && typeof b === 'number' && typeof c === 'boolean') {
-//     if (c === true) {
-//       console.log(`Hello ${a}, your age is ${b}, you are available for hire.`);
-//     } else {
-//       console.log(`Hello ${a}, your age is ${b}, you are not available for hire.`);
-//     }
-//   } else {
-//     console.log('Invalid input types. Please provide a string, a number, and a boolean value.');
-//   }
-// }
-
-
 // Needed Output
 checkStatus("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
 checkStatus(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
 checkStatus(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
 checkStatus(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+
+// function checker(zName) {
+//   return function (status) {
+//     return function (salary) {
+//       return status === "Available" ? `${zName}, My Salary Is ${salary}` : `Iam Not Avaialble`;
+//     };
+//   };
+// }
+// const checker=status=>zName=> salary=>"Available" ? `${zName}, My Salary Is ${salary}` : `Iam Not Avaialble`
+const checker = zName => status => salary =>
+  status === "Available" ? `${zName}, My Salary Is ${salary}` : `Iam Not Avaialble`;
+
+console.log(checker("Osama")("Available")(4000)); // Osama, My Salary Is 4000
+console.log(checker("Ahmed")("Not Available")()); // Iam Not Avaialble
+
+
+
+/*
+  Function Arrow Challenges
+*/
+
+// [1] One Statement In Function
+// [2] Convert To Arrow Function
+// [3] Print The Output [Arguments May Change]
+
+// let names = function (...names) {
+  
+//   return `[${data}]`;
+// };
+
+// console.log(names("Osama", "Mohamed", "Ali", "Ibrahim"));
+// // String [Osama], [Mohamed], [Ali], [Ibrahim] => Done !
+
+// /* ================================= */
+
+// // [1] Replace ??? In Return Statement To Get The Output
+// // [2] Create The Same Function With Regular Syntax
+// // [3] Use Array Inside The Arguments To Get The Output
+
+// let myNumbers = [20, 50, 10, 60];
+
+// let calc = (one, two, ...nums) => "???";
+
+// console.log(calc(10, "???", "???")); // 80
+
+
+
+/*
+  Higher Order Functions Challenges
+
+  You Can Use
+  - ,
+  - _
+  - Space
+  - True => 1 => One Time Only In The Code
+
+  You Cannot Use
+  - Numbers
+  - Letters
+
+  - You Must Use [Filter + Map + Reduce + Your Knowledge]
+  - Order Is Not Important
+  - All In One Chain
+
+*/
+
+let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z";
+
+let solution = myString.split(",").filter(function(elt){
+  return !iNAN.elt 
+})
+
+console.log(solution); // Elzero Web School

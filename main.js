@@ -394,3 +394,134 @@ your age in secondes is ${theAge*365*24*60*60}`)
 multiply(10, 20); // 200
 multiply("A", 10, 30); // 300
 multiply(100.5, 10, "B"); // 1000
+
+console.log("%cfunction scope assiegment", "color: red;font-size:40px")
+function getDetails(zName, zAge, zCountry) {
+    function namePattern(zName) {
+       let name = zName.split(" ");
+       let fullname = name[1].slice(0, 1);
+       return `${name[0]} ${fullname}`;
+    }
+    function ageWithMessage(zAge) {
+      let age=zAge.slice(0,2);
+      return `Your age is ${age}`;
+    }
+    function countryTwoLetters(zCountry) {
+      let country = zCountry.slice(0, 2).toUpperCase();
+      return `You live in ${country}`;
+    }
+    function fullDetails() {
+        return `Hello, ${namePattern(zName)}, ${ageWithMessage(zAge)}, ${countryTwoLetters(zCountry)}`;
+    }
+    return fullDetails(); // Do Not Edit This
+}
+
+  
+  console.log(getDetails("Osama Mohamed", "38 Is My Age", "Egypt"));
+  // Hello Osama M., Your Age Is 38, You Live In EG
+  
+  console.log(getDetails("Ahmed ali", "32 Is The Age", "Syria"));
+  // Hello Ahmed A., Your Age Is 32, You Live In SY
+
+
+//   function itsMe() {
+//     return `Iam A Normal Function`;
+//   }
+   
+ let  itsMe = function() { return`Iam A Normal Function`}
+  console.log(itsMe()); // Iam A Normal Function
+
+  function urlCreate(protocol, web, tld ) {
+
+    return `${protocol}://www.${web}.${tld}`;
+  }
+
+
+  let unrlCreate= function(protocol, web, tld ){return `${protocol}://www.${web}.${tld}`;}
+  
+  console.log(urlCreate("https", "elzero", "org")); // https://www.elzero.org
+
+  function specialMix(...data) {
+    let result=0;
+    for(let i=0; i< data.length;i++){
+        if(typeof data[i]==='number'){
+          result+=data[i] }
+        else if(typeof data[i]==='string'){
+            let number=parseInt(data[i])
+            if(!isNaN(number)){
+            result+=number
+            
+            }
+        }
+    }
+    if(result===0){ return "all is a string"}
+    else{return result}
+  }
+
+  console.log(specialMix(10, 20, 30)); // 60
+  console.log(specialMix("10Test", "Testing", "20Cool")); // 30
+  console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
+  console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
+
+
+  console.log("%c heig order function ", "color: red;font-size:40px")
+  let mix = [1, 2, 3, "E", 4, "l", "z", "e", "r", 5, "o"];
+ let btissam=mix.map(function(elt){
+    if (typeof elt==='string'){
+        return elt
+    }
+    else {
+        return ""
+    }
+}).reduce(function(acc,elt){
+      return `${acc}${elt}`
+
+})
+console.log(btissam);
+// Elzero
+
+let myString = "EElllzzzzzzzeroo";
+
+let stringtow=myString.split("").filter(function(elt,index,arr){
+    if(arr[index]!==arr[index+1]){
+        return elt
+    }
+}).reduce(function(acc,elt){
+    return `${acc}${elt}`
+})
+console.log(stringtow)
+
+let myArray = ["E", "l", "z", ["e", "r"], "o"];
+let myarraytow=myArray.reduce(function(acc,elt){
+    return `${acc}${elt}`
+}).split("").filter(function(elt){
+    if(elt!==","){
+        return elt;
+    }
+}).reduce(function(acc,elt){
+    return `${acc}${elt}`
+})
+console.log(myarraytow)
+
+let numsAndStrings = [1, 10, -10, -20, 5, "A", 3, "B", "C"];
+
+let justnumbers=numsAndStrings.filter(function(elt){
+    return typeof elt=== "number"
+}).map(function(elt){
+    return -elt
+})
+console.log(justnumbers)
+
+
+let nums = [2, 12, 11, 5, 10, 1, 99];
+let numsNew=nums.reduce(function(acc,elt){
+    if(elt%2===0){
+        return acc*elt
+    }
+    else{
+        return acc+elt
+    }
+},1)
+console.log(numsNew)
+// 500
+// [-1, -10, 10, 20, -5, -3]
