@@ -5,8 +5,9 @@ let typeval=document.querySelector('[name="type"]');
 let creatval=document.querySelector('[name="create"]');
 let resultt=document.querySelector(".results")
 let form=document.forms[0]
-
-
+let pelement=document.createElement("p")
+form.append(pelement)
+pelement.remove()
 //show the result
 form.onsubmit=function(event){
     event.preventDefault();/// Don't submit the data
@@ -50,16 +51,17 @@ submit.style.border = "none";
 submit.style.margin = "15px auto";
 submit.style.color = "white";
 //add event
-window.onload = function () {
+window.onload = function () {//we add events 
     numbrval.focus();
   };
   numbrval.onblur=function(){
-    console.log("numbrval blur event fired");
     textval.focus();
 } 
 typeval.onblur=function(){
-    console.log("typeval blur event fired");
     creatval.click();
 }
+
+
+console.log(document.styleSheets[0].rules[0])
 
 
