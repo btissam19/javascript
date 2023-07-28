@@ -620,68 +620,98 @@ console.log(finalObject);
 */
 // The Object To Work With
 let myFavGames = {
-    "Trinity Universe": {
-      publisher: "NIS America",
-      price: 40,
+  "Trinity Universe": {
+    publisher: "NIS America",
+    price: 40,
+  },
+  "Titan Quest": {
+    publisher: "THQ",
+    bestThree: {
+      one: "Immortal Throne",
+      two: "Ragnarök",
+      three: "Atlantis",
     },
-    "Titan Quest": {
-      publisher: "THQ",
-      bestThree: {
-        one: "Immortal Throne",
-        two: "Ragnarök",
-        three: "Atlantis",
-      },
-      price: 50,
+    price: 50,
+  },
+  YS: {
+    publisher: "Falcom",
+    bestThree: {
+      one: "Oath in Felghana",
+      two: "Ark Of Napishtim",
+      three: "origin",
     },
-    YS: {
-      publisher: "Falcom",
-      bestThree: {
-        one: "Oath in Felghana",
-        two: "Ark Of Napishtim",
-        three: "origin",
-      },
-      price: 40,
-    },
-  };
+    price: 40,
+  },
+};
+
+// Code One => How To Get Object Length ?
+let objectLength = Object.keys(myFavGames).length;
+console.log(objectLength);
+
+for (let i = 0; i < objectLength; i++) {
+  let gameName = Object.keys(myFavGames)[i];//its became a like a liste of newted object otrwise if we want to make t object like an array and applicat all array functionality we use tobject.key function
+  console.log(`The Game Name Is ${gameName}`);
+  console.log(`The Publisher Is ${myFavGames[gameName].publisher}`);
+  console.log(`The Price Is ${myFavGames[gameName].price}`);
   
-  // Code One => How To Get Object Length ?
-  let objectLength =Object.keys(myFavGames).length;
-  console.log(objectLength)
-  
-  for (let i = 0; i < objectLength; i++) {
-    console.log(`The Game Name Is ${myFavGames["Trinity Universe"]}`);
-    console.log(`The Publisher Is  ${myFavGames["Trinity Universe"]}`);
-    console.log(`The Price Is ???????`);}
-  
-//     // Check If Nested Object Has Property (bestThree)
-//     if (???????) {
-//       console.log("- Game Has Releases");
-//       console.log(`First => ???????`);
-//       console.log(`Second => ???????`);
-//       console.log(`Third => ???????`);
-//     }
-//     console.log("#".repeat(20));
-//   }
-  
-  // Ouput
-  
-  "The Game Name Is Trinity Universe"
-  "The Publisher Is NIS America"
-  "The Price Is 40"
-  "####################"
-  "The Game Name Is Titan Quest"
-  "The Publisher Is THQ"
-  "The Price Is 50"
-  "- Game Has Releases"
-  "First => Immortal Throne"
-  "Second => Ragnarök"
-  "Third => Atlantis"
-  "####################"
-  "The Game Name Is YS"
-  "The Publisher Is Falcom"
-  "The Price Is 40"
-  "- Game Has Releases"
-  "First => Oath in Felghana"
-  "Second => Ark Of Napishtim"
-  "Third => origin"
-  "####################"
+  // Check If Nested Object Has Property (bestThree)
+  if ("bestThree" in myFavGames[gameName]) {
+    console.log("- Game Has Releases");
+    console.log(`First => ${myFavGames[gameName].bestThree.one}`);
+    console.log(`Second => ${myFavGames[gameName].bestThree.two}`);
+    console.log(`Third => ${myFavGames[gameName].bestThree.three}`);
+  }
+  console.log("#".repeat(20));
+}
+
+
+
+
+// let myElement = document.querySelector(".js");
+
+// console.log(myElement.innerHTML);
+// console.log(myElement.textContent);
+
+// myElement.innerHTML = "Text From <b>Main.js</b> File";
+// myElement.textContent = "Text From <span>Main.js</span> File";
+
+// document.images[0].src = "https://google.com";
+// document.images[0].alt = "Alternate";
+// // document.images[0].title = "Picture";
+// // document.images[0].id = "pic";
+// // document.images[0].className = "img";
+
+// let myLink = document.querySelector(".link");
+
+// console.log(myLink.getAttribute("class"));
+// console.log(myLink.getAttribute("href"));
+
+// myLink.setAttribute("href", "https://twitter.com");
+// myLink.setAttribute("id", "pic");
+// myLink.setAttribute("title", "Twitter");
+// myLink.setAttribute("className", "img");
+// console.log(myLink.getAttribute("class"));
+// console.log(myLink.getAttribute("href"));
+// console.log(myLink.getAttribute("id"));
+// console.log(myLink.getAttribute("title"));
+
+
+
+
+let myElement = document.createElement("div");
+let myAttr = document.createAttribute("data-custom");
+let myText = document.createTextNode("Product One");
+let myComment = document.createComment("This Is Div");
+
+myElement.className = "product";
+myElement.setAttributeNode(myAttr);
+myElement.setAttribute("data-test", "Testing");
+
+// Append Comment To Element
+myElement.appendChild(myComment);
+
+// Append Text To Element
+myElement.appendChild(myText);
+
+// Append Element To Body
+document.body.appendChild(myElement);
