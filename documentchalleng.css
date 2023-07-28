@@ -1,0 +1,9 @@
+.box{
+display:block;
+border-radius: 2;
+color: aliceblue;
+width: min-content;
+background-color: orange;
+margin: auto 5px;
+padding: 5px;
+}
