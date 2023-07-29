@@ -116,7 +116,9 @@ console.log(enddiv)
 
 console.log("%cASSIEGMENT 4 from part tow of DOM","color:red")
 let elzero=document.body.lastChild.nodeValue.trim()
-console.log(elzero)
-console.log("%cASSIEGMENT 5 from part tow of DOM","color:red")
- [... document.body.childreen.forEach(element => {console.log(`This is ${element.localName}`)
+console.log(elzero);
+console.log("%cASSIEGMENT 5 from part tow of DOM","color:red");
+[...document.body.children].forEach(
+    el => (el.onclick = _ => console.log(`This is ${el.localName}`))//localName for take the html tag name
+);
     
