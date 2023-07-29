@@ -8,6 +8,9 @@ let form=document.forms[0]
 let pelement=document.createElement("p")
 form.append(pelement)
 pelement.remove()
+console.log(numbrval.nextSibling)
+console.log(typeval.previousElementSibling)
+console.log(creatval.parentElement)
 //show the result
 form.onsubmit=function(event){
     event.preventDefault();/// Don't submit the data
