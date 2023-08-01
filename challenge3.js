@@ -56,5 +56,5 @@ footer.style.cssText = "background-color: rgb(35, 169, 110); color: white; font-
 /* first we create a function for create element minimzlig
    than we do a looop for create header ekement and also div content
    Than we put content 
-   than we put style for eacelement
+   than we put style for each element
  */
