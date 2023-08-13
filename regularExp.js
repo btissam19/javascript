@@ -5,13 +5,15 @@ console.log(ip.match(reIp))
 console.log("#".repeat(90))
 //############################## Assiegment 2##########################################
 let specialNames = "Os10O OsO Os100O Osa100O Os1000 Os100m";
-let reSpecialNames=/os\d*o/gi
+let reSpecialNames=/\bos\d*o/gi
 console.log(specialNames.match(reSpecialNames))
 console.log("#".repeat(90))
 //############################## Assiegment 3##########################################
 let phone = "+(995)-123 (4567)";
 let rePhone=/\+\(\d{3}\)-\d{3}\s\(\d{4}\)/
+let REphone=/(\d+|\D+)+/
 console.log(phone.match(rePhone))
+console.log(phone.match(REphone))
 console.log("#".repeat(90))
 //############################## Assiegment 4##########################################
 // let re = /https?:\/\/(?:[-\w]+\.)?([-\w]+)\.\w+(?:\.\w+)?\/?.*/i;
