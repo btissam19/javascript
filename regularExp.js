@@ -5,7 +5,7 @@ console.log(ip.match(reIp))
 console.log("#".repeat(90))
 //############################## Assiegment 2##########################################
 let specialNames = "Os10O OsO Os100O Osa100O Os1000 Os100m";
-let reSpecialNames=/\bos\d*o/gi
+let reSpecialNames=/\b(os)\d*o/gi
 console.log(specialNames.match(reSpecialNames))
 console.log("#".repeat(90))
 //############################## Assiegment 3##########################################
