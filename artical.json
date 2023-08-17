@@ -1,0 +1,39 @@
+[
+    {"id":1,
+     "author":"Colleen hoover",
+     "title":"reminders of him",
+     "type":"Novel",
+     "category":"Novel"
+  
+    },
+    {
+     "id":2,
+     "author":"Dareen hardy",
+     "title":"compound effect",
+     "type":"Book",
+     "category":"Novel"
+  
+    },
+    {
+        "id":3,
+        "author":"Colleen hoover",
+        "title":"its end with us",
+        "type":"novel",
+        "category":"Novel"
+    },
+    {
+        "id":4,
+        "author":"Colleen hoover",
+        "title":"its start with us",
+        "type":"novel",
+        "category":"Novel"
+    },
+    {
+        "id":5,
+        "author":"jeams clear",
+        "title":"atomic habits",
+        "type":"Book",
+        "category":"Novel"
+    }
+  ]
+  
